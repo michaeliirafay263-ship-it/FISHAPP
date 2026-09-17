@@ -8,11 +8,13 @@
     "dev:customer": "npm --prefix customer-rider-app run dev",
     "dev:admin": "npm --prefix admin-panel run dev",
     "dev:backend": "npm --prefix backend start",
+    "build:web": "vite build",
     "build:customer": "npm --prefix customer-rider-app run build",
     "build:admin": "npm --prefix admin-panel run build",
-    "build": "npm run build:customer && npm run build:admin"
+    "build": "npm run build:web && npm run build:customer && npm run build:admin"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "lucide-react": "^1.46.0",
